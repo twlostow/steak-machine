@@ -37,11 +37,11 @@
 
 #include <stdint.h>
 
-#include "inc/LPC11xx.h"
+#include <sys/LPC11xx.h>
 
 #include "config.h"
 
-#include "hdr/hdr_syscon.h"
+#include <sys/hdr_syscon.h>
 
 /*
 +=============================================================================+

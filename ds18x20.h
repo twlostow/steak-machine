@@ -15,10 +15,13 @@ public:
 	uint8_t *get_rom_id() { return m_rom_id; }
 	void start();
 	bool poll();
-	int read();
+	float read();
 
 private:
-	uint8_t m_rom_id[8];
+	void write_scratchpad(uint8_t th, uint8_t tl, uint8_t conf);
+	void read_scratchpad();
+
+	uint8_t m_rom_id[8], sp[8];
 	OnewireMaster *m_ow;
 };
 

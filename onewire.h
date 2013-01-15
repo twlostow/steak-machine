@@ -33,7 +33,11 @@ public:
 	uint8_t rom_search(uint8_t diff, uint8_t *id);
 	void command(uint8_t command, uint8_t *id);
 
-
+	bool with_parasite()
+	{
+		return m_parasite_enable;
+	}
+	
 private:
 	uint8_t bit_io_intern(uint8_t b, uint8_t parasite);
 	void dir_out() { m_pin->SetMode(GPIOPin::OUTPUT); }
@@ -46,10 +50,6 @@ private:
 	{
  		out_high();
   		dir_out();
-	}
-
-	void ow_parasite_disable(void) {
-  		dir_in();
 	}
 
 	GPIOPin *m_pin;

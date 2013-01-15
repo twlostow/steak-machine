@@ -1,3 +1,5 @@
+/* A trivial driver for an LCD display (132 x 32 pixels) found in CERN trash bin. SED1520-based. */
+
 #ifndef __CERN_TRASH_LCD_H
 #define __CERN_TRASH_LCD_H
 

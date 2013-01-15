@@ -26,7 +26,7 @@ RM = rm -f
 #=============================================================================#
 
 # project name
-PROJECT = lpc1114_blink_led
+PROJECT = pid-lpc1114
 
 # core type
 CORE = cortex-m0
@@ -48,7 +48,7 @@ AS_DEFS =
 
 # include directories (absolute or relative paths to additional folders with
 # headers, current folder is always included)
-INC_DIRS = inc
+INC_DIRS = include lib
 
 # library directories (absolute or relative paths to additional folders with
 # libraries)
@@ -60,7 +60,7 @@ LIBS =
 
 # additional directories with source files (absolute or relative paths to
 # folders with source files, current folder is always included)
-SRCS_DIRS =
+SRCS_DIRS = lib
 
 # extension of C++ files
 CXX_EXT = cpp

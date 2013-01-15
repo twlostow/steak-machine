@@ -5,8 +5,9 @@
 
 class Surface {
 	public: 
+
 		struct Font {
-  			uint8_t min_char, max_char, height;
+  		uint8_t min_char, max_char, height;
 			const uint8_t *width_table;
 			const uint16_t *offset_table;
 			const uint8_t *glyph_data;
@@ -19,7 +20,7 @@ class Surface {
 		void line(int x0, int y0, int x1, int y1, int value);
 		void box(int x1, int y1, int x2, int y2, int value);			
 		void text(const Font *font, int x, int y, const char *str);
-		void bitmap(uint8_t *data, int x, int y, int w, int h);
+		void pixmap(uint8_t *data, int x, int y, int w, int h);
 		int text_width(const Font *font, const char *str);
 
 		uint8_t *get_buffer()

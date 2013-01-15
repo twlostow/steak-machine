@@ -4,7 +4,8 @@
 #include <stdint.h>
 
 #include "config.h"
-#include "LPC11xx.h"
+
+#include <sys/LPC11xx.h>
 
 class GPIOPin {
 	public:
@@ -54,7 +55,6 @@ class LPCPin : public GPIOPin {
 		
 		void SetMode(int mode)
 		{
-			//int is_zero = *m_gma;
 			if ((mode & DIRECTION_MASK) == INPUT)
 				m_regs->DIR &= ~(1 << m_pin);
 			else {

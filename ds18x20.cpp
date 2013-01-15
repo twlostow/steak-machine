@@ -1,3 +1,5 @@
+/* Drier for DS1820- and similar temperatur sensors */
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -85,5 +87,58 @@ bool DS18TempSensor::probe(int index) {
 
   memcpy(m_rom_id, id, 8);
 
+//  write_scratchpad(0,0,0x7f);
+
   return ret;
+}
+
+
+void DS18TempSensor::start() 
+{
+  m_ow->reset();
+  m_ow->command(DS18X20_CONVERT_T, m_rom_id);
+}
+
+bool DS18TempSensor::poll() 
+{
+   return m_ow->bit_io(1);
+}
+
+float DS18TempSensor::read()
+{
+	read_scratchpad();
+
+	int measure = (unsigned int)sp[0] | ((unsigned int)sp[1] << 8);
+  
+    if(measure & 0x8000) 
+    {		
+  	 	measure ^= 0xffff; /* convert to positive => (twos complement)++ */
+  	  	measure++;
+  	  	return -(float)measure / 16.0;
+  	} else {
+  		return (float)measure / 16.0;
+  	}
+}
+
+void DS18TempSensor::write_scratchpad(uint8_t th, uint8_t tl, uint8_t conf)
+{
+	uint8_t ret;
+
+ 	m_ow->reset();
+    m_ow->command(DS18X20_WRITE_SCRATCHPAD, m_rom_id);
+    m_ow->byte_wr(th);
+    m_ow->byte_wr(tl);
+    if(m_rom_id[0] == DS18B20_FAMILY_CODE || m_rom_id[0] == DS1822_FAMILY_CODE) 
+ 	   m_ow->byte_wr(conf); 
+}
+
+void DS18TempSensor::read_scratchpad()
+{
+	 int i;
+  	 
+  	 m_ow->reset();
+  	 m_ow->command( DS18X20_READ, m_rom_id );
+  	 for(i = 0; i < 8; i++) sp[i] = m_ow->byte_rd();
+
+
 }

@@ -1,3 +1,6 @@
+/* Simple 1-bit graphics surface with drawing functions.
+   T.W. 2013, public domain */
+   
 #include <stdlib.h>
 
 #include "surface.h"
