@@ -177,6 +177,7 @@ void system_init(void)
 
 	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_IOCON;	// enable clock for IO configuration block
 	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_CT32B0;	// enable clock for IO configuration block
+	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_CT32B1;	// enable clock for IO configuration block
 			
 	timer_init();
 }

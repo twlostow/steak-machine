@@ -62,6 +62,23 @@ class LPCPin : public GPIOPin {
 				Output(m_cur_state);
 			}
 		};
+
+		void EnableInterrupt(bool edge, int pos_neg)
+		{
+			if(edge)
+				m_regs->IS &= ~(1<<m_pin);
+			else
+				m_regs->IS |= (1<<m_pin);
+
+				m_regs->IBE &= ~(1<<m_pin);
+
+			if(pos_neg)
+				m_regs->IEV |= (1<<m_pin);
+			else
+				m_regs->IEV &= ~(1<<m_pin);
+				
+			m_regs->IE |= (1<<m_pin);
+		}		
 		
 		void Output(bool value)
 		{
@@ -74,9 +91,23 @@ class LPCPin : public GPIOPin {
 			return *m_gma != 0;
 		};
 		
+		bool Edge(bool rising)
+		{
+			bool cur = Input();
+			
+			if(rising && cur && !m_in_state)
+				return true;
+			else if (!rising && !cur && m_in_state)
+				return true;
+			
+			m_in_state = cur;
+			return false;
+		}
+		
 	private:
 		int m_pin;
 		bool m_cur_state;
+		bool m_in_state;
 		volatile uint32_t *m_gma;
 		volatile LPC_GPIO_TypeDef *m_regs;
 };
