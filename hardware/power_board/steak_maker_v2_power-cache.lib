@@ -1,0 +1,605 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Capacitors_THD:CAER_100UF_16V_20%_CHEMI-CON_APSA160ELL101MFA5G
+#
+DEF ~Capacitors_THD:CAER_100UF_16V_20%_CHEMI-CON_APSA160ELL101MFA5G C 0 60 Y Y 1 L N
+F0 "C" 150 120 50 H V C CNN
+F1 "Capacitors_THD:CAER_100UF_16V_20%_CHEMI-CON_APSA160ELL101MFA5G" 0 -260 60 H I L CNN
+F2 "Capacitors THD:CAPPR250-680X1080" 0 -350 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\CAER_CHEMI-CON_PSA.pdf" 0 -440 60 H I L CNN
+F4 "100uF" 150 -120 50 H V C CNN "~"
+F5 "CAER_100UF_16V_20%_CHEMI-CON_APSA160ELL101MFA5G" 0 -530 60 H I L CNN "Part Number"
+F6 "Capacitor - polarized" 0 -620 60 H I L CNN "Library Ref"
+F7 "SchLib\\Capacitors.SchLib" 0 -710 60 H I L CNN "Library Path"
+F8 "=Value" 0 -800 60 H I L CNN "Comment"
+F9 "Standard" 0 -890 60 H I L CNN "Component Kind"
+F10 "Standard" 0 -980 60 H I L CNN "Component Type"
+F11 "CAPPR250-680X1080" 0 -1070 60 H I L CNN "Footprint"
+F12 "~~" 0 -1160 60 H I L CNN "PackageDescription"
+F13 "2.0000000000000000e+00" 0 -1250 60 H I L CNN "Pin Count"
+F14 "PcbLib\\Capacitors THD.PcbLib" 0 -1340 60 H I L CNN "Footprint Path"
+F15 "CAPPR250-680X1080" 0 -1430 60 H I L CNN "Footprint Ref"
+F16 "100uF" 0 -1520 60 H I L CNN "Val"
+F17 "None" 0 -1610 60 H I L CNN "Status"
+F18 "~~" 0 -1700 60 H I L CNN "Status Comment"
+F19 "16V" 0 -1790 60 H I L CNN "Voltage"
+F20 "~~" 0 -1880 60 H I L CNN "TC"
+F21 "±20%" 0 -1970 60 H I L CNN "Tolerance"
+F22 "Low ESR 0R025 Conductive Polymer Aluminium Solid Capacitor" 0 -2060 60 H I L CNN "Part Description"
+F23 "UNITED CHEMI-CON" 0 -2150 60 H I L CNN "Manufacturer"
+F24 "APSA160ELL101MFA5G" 0 -2240 60 H I L CNN "Manufacturer Part Number"
+F25 "LS2.5 D6.3 x H10.5" 0 -2330 60 H I L CNN "Case"
+F26 "Yes" 0 -2420 60 H I L CNN "Mounted"
+F27 "~~" 0 -2510 60 H I L CNN "PressFit"
+F28 "No" 0 -2600 60 H I L CNN "Socket"
+F29 "No" 0 -2690 60 H I L CNN "SMD"
+F30 "No" 0 -2780 60 H I L CNN "Sense"
+F31 "~~" 0 -2870 60 H I L CNN "Sense Comment"
+F32 "10.8mm" 0 -2960 60 H I L CNN "ComponentHeight"
+F33 "~~" 0 -3050 60 H I L CNN "Manufacturer1 Example"
+F34 "~~" 0 -3140 60 H I L CNN "Manufacturer1 Part Number"
+F35 "~~" 0 -3230 60 H I L CNN "Manufacturer1 ComponentHeight"
+F36 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\CAER_CHEMI-CON_PSA.pdf" 0 -3320 60 H I L CNN "HelpURL"
+F37 "CERN DEM JLC" 0 -3410 60 H I L CNN "Author"
+F38 "01/12/12 00:00:00" 0 -3500 60 H I L CNN "CreateDate"
+F39 "01/12/12 00:00:00" 0 -3590 60 H I L CNN "LatestRevisionDate"
+F40 "Capacitors THD" 0 -3680 60 H I L CNN "Library Name"
+F41 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3770 60 H I L CNN "License"
+DRAW
+A 320 0 160 1800 1500 0 1 10 N 160 0 181 80
+A 320 0 160 -1499 1800 0 1 10 N 182 -80 160 0
+T 900 100 30 50 1 0 1 + Normal 0 L B
+P 2 0 1 10 80 0 120 0 N
+P 2 0 1 10 120 80 120 -80 N
+P 2 0 1 10 160 0 200 0 N
+X 1 1 0 0 100 R 0 0 0 1 P
+X 2 2 300 0 100 L 0 0 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Capacitors_THD:CAER_470UF_10V_20%_500-1050X1150_LESR0R015
+#
+DEF ~Capacitors_THD:CAER_470UF_10V_20%_500-1050X1150_LESR0R015 C 0 60 Y Y 1 L N
+F0 "C" 150 120 50 H V C CNN
+F1 "Capacitors_THD:CAER_470UF_10V_20%_500-1050X1150_LESR0R015" 0 -260 60 H I L CNN
+F2 "Capacitors THD:CAPPR500-1050X1150" 0 -350 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\CAER-LESR_SANYO_SP.pdf" 0 -440 60 H I L CNN
+F4 "470uF" 150 -120 50 H V C CNN "~"
+F5 "CAER_470UF_10V_20%_500-1050X1150_LESR0R015" 0 -530 60 H I L CNN "Part Number"
+F6 "Capacitor - polarized" 0 -620 60 H I L CNN "Library Ref"
+F7 "SchLib\\Capacitors.SchLib" 0 -710 60 H I L CNN "Library Path"
+F8 "=Value" 0 -800 60 H I L CNN "Comment"
+F9 "Standard" 0 -890 60 H I L CNN "Component Kind"
+F10 "Standard" 0 -980 60 H I L CNN "Component Type"
+F11 "CAPPR500-1050X1150" 0 -1070 60 H I L CNN "Footprint"
+F12 "~~" 0 -1160 60 H I L CNN "PackageDescription"
+F13 "2.0000000000000000e+00" 0 -1250 60 H I L CNN "Pin Count"
+F14 "PcbLib\\Capacitors THD.PcbLib" 0 -1340 60 H I L CNN "Footprint Path"
+F15 "CAPPR500-1050X1150" 0 -1430 60 H I L CNN "Footprint Ref"
+F16 "470uF" 0 -1520 60 H I L CNN "Val"
+F17 "Obsolete" 0 -1610 60 H I L CNN "Status"
+F18 "~~" 0 -1700 60 H I L CNN "Status Comment"
+F19 "10V" 0 -1790 60 H I L CNN "Voltage"
+F20 "~~" 0 -1880 60 H I L CNN "TC"
+F21 "±20%" 0 -1970 60 H I L CNN "Tolerance"
+F22 "Low ESR 0R015 Aluminum Solid Capacitor With Organic Semiconductive Electrolyte" 0 -2060 60 H I L CNN "Part Description"
+F23 "SANYO OS-CON" 0 -2150 60 H I L CNN "Manufacturer"
+F24 "10SP470M" 0 -2240 60 H I L CNN "Manufacturer Part Number"
+F25 "LS5 D10.5 x H11.5" 0 -2330 60 H I L CNN "Case"
+F26 "Yes" 0 -2420 60 H I L CNN "Mounted"
+F27 "~~" 0 -2510 60 H I L CNN "PressFit"
+F28 "No" 0 -2600 60 H I L CNN "Socket"
+F29 "No" 0 -2690 60 H I L CNN "SMD"
+F30 "No" 0 -2780 60 H I L CNN "Sense"
+F31 "~~" 0 -2870 60 H I L CNN "Sense Comment"
+F32 "11.5mm" 0 -2960 60 H I L CNN "ComponentHeight"
+F33 "~~" 0 -3050 60 H I L CNN "Manufacturer1 Example"
+F34 "~~" 0 -3140 60 H I L CNN "Manufacturer1 Part Number"
+F35 "~~" 0 -3230 60 H I L CNN "Manufacturer1 ComponentHeight"
+F36 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\CAER-LESR_SANYO_SP.pdf" 0 -3320 60 H I L CNN "HelpURL"
+F37 "CERN DEM JLC" 0 -3410 60 H I L CNN "Author"
+F38 "01/29/08 00:00:00" 0 -3500 60 H I L CNN "CreateDate"
+F39 "03/16/09 00:00:00" 0 -3590 60 H I L CNN "LatestRevisionDate"
+F40 "Capacitors THD" 0 -3680 60 H I L CNN "Library Name"
+F41 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3770 60 H I L CNN "License"
+DRAW
+A 320 0 160 1800 1500 0 1 10 N 160 0 181 80
+A 320 0 160 -1499 1800 0 1 10 N 182 -80 160 0
+T 900 100 30 50 1 0 1 + Normal 0 L B
+P 2 0 1 10 80 0 120 0 N
+P 2 0 1 10 120 80 120 -80 N
+P 2 0 1 10 160 0 200 0 N
+X 1 1 0 0 100 R 0 0 0 1 P
+X 2 2 300 0 100 L 0 0 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Capacitors_THD:CCR_100NF_50V_10%_KEMET_C322C104K5R5TA
+#
+DEF ~Capacitors_THD:CCR_100NF_50V_10%_KEMET_C322C104K5R5TA C 0 60 Y Y 1 L N
+F0 "C" 150 120 50 H V C CNN
+F1 "Capacitors_THD:CCR_100NF_50V_10%_KEMET_C322C104K5R5TA" 0 -260 60 H I L CNN
+F2 "Capacitors THD:CAPRR508-318X508X660" 0 -350 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\CCR_KEMET_C322C104K5R5TA.pdf" 0 -440 60 H I L CNN
+F4 "100nF" 150 -120 50 H V C CNN "~"
+F5 "CCR_100NF_50V_10%_KEMET_C322C104K5R5TA" 0 -530 60 H I L CNN "Part Number"
+F6 "Capacitor - non polarized" 0 -620 60 H I L CNN "Library Ref"
+F7 "SchLib\\Capacitors.SchLib" 0 -710 60 H I L CNN "Library Path"
+F8 "=Value" 0 -800 60 H I L CNN "Comment"
+F9 "Standard" 0 -890 60 H I L CNN "Component Kind"
+F10 "Standard" 0 -980 60 H I L CNN "Component Type"
+F11 "CAPRR508-318X508X660" 0 -1070 60 H I L CNN "Footprint"
+F12 "~~" 0 -1160 60 H I L CNN "PackageDescription"
+F13 "2.0000000000000000e+00" 0 -1250 60 H I L CNN "Pin Count"
+F14 "PcbLib\\Capacitors THD.PcbLib" 0 -1340 60 H I L CNN "Footprint Path"
+F15 "CAPRR508-318X508X660" 0 -1430 60 H I L CNN "Footprint Ref"
+F16 "100nF" 0 -1520 60 H I L CNN "Val"
+F17 "None" 0 -1610 60 H I L CNN "Status"
+F18 "~~" 0 -1700 60 H I L CNN "Status Comment"
+F19 "50VDC" 0 -1790 60 H I L CNN "Voltage"
+F20 "X7R" 0 -1880 60 H I L CNN "TC"
+F21 "±10%" 0 -1970 60 H I L CNN "Tolerance"
+F22 "Radial Lead Type Multilayer Ceramic Capacitor" 0 -2060 60 H I L CNN "Part Description"
+F23 "KEMET" 0 -2150 60 H I L CNN "Manufacturer"
+F24 "C322C104K5R5TA" 0 -2240 60 H I L CNN "Manufacturer Part Number"
+F25 "LS5.08 W3.18 x L5.08 x H6.6" 0 -2330 60 H I L CNN "Case"
+F26 "Yes" 0 -2420 60 H I L CNN "Mounted"
+F27 "~~" 0 -2510 60 H I L CNN "PressFit"
+F28 "No" 0 -2600 60 H I L CNN "Socket"
+F29 "No" 0 -2690 60 H I L CNN "SMD"
+F30 "No" 0 -2780 60 H I L CNN "Sense"
+F31 "~~" 0 -2870 60 H I L CNN "Sense Comment"
+F32 "6.6mm" 0 -2960 60 H I L CNN "ComponentHeight"
+F33 "~~" 0 -3050 60 H I L CNN "Manufacturer1 Example"
+F34 "~~" 0 -3140 60 H I L CNN "Manufacturer1 Part Number"
+F35 "~~" 0 -3230 60 H I L CNN "Manufacturer1 ComponentHeight"
+F36 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\CCR_KEMET_C322C104K5R5TA.pdf" 0 -3320 60 H I L CNN "HelpURL"
+F37 "CERN DEM JLC" 0 -3410 60 H I L CNN "Author"
+F38 "05/23/17 00:00:00" 0 -3500 60 H I L CNN "CreateDate"
+F39 "05/23/17 00:00:00" 0 -3590 60 H I L CNN "LatestRevisionDate"
+F40 "Capacitors THD" 0 -3680 60 H I L CNN "Library Name"
+F41 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3770 60 H I L CNN "License"
+DRAW
+P 2 0 1 10 100 0 130 0 N
+P 2 0 1 10 130 -80 130 80 N
+P 2 0 1 10 170 80 170 -80 N
+P 2 0 1 10 200 0 170 0 N
+X 1 1 0 0 100 R 0 0 0 1 P
+X 2 2 300 0 100 L 0 0 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:Transformer_1P_1S
+#
+DEF Device:Transformer_1P_1S T 0 40 Y N 1 F N
+F0 "T" 0 250 50 H V C CNN
+F1 "Device:Transformer_1P_1S" 0 -300 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+A -100 -150 50 899 1 0 1 0 N -100 -100 -50 -150
+A -100 -150 50 -1 -899 0 1 0 N -50 -150 -100 -199
+A -100 -50 50 899 1 0 1 0 N -100 0 -50 -50
+A -100 -50 50 -1 -899 0 1 0 N -50 -50 -100 -99
+A -100 50 50 899 1 0 1 0 N -100 100 -50 50
+A -100 50 50 -1 -899 0 1 0 N -50 50 -100 1
+A -100 150 50 899 1 0 1 0 N -100 200 -50 150
+A -100 150 50 -1 -899 0 1 0 N -50 150 -100 101
+A 100 -50 50 899 -1799 0 1 0 N 100 0 51 -50
+A 100 -50 50 1799 -899 0 1 0 N 51 -50 100 -99
+A 100 50 50 899 -1799 0 1 0 N 100 100 51 50
+A 100 50 50 1799 -899 0 1 0 N 51 50 100 1
+A 100 150 50 899 -1799 0 1 0 N 100 200 51 150
+A 100 150 50 1799 -899 0 1 0 N 51 150 100 101
+A 101 -150 50 910 -1799 0 1 0 N 101 -100 52 -150
+A 101 -150 50 -912 -1799 0 1 0 N 101 -199 52 -150
+P 2 0 1 0 -25 200 -25 -200 N
+P 2 0 1 0 25 -200 25 200 N
+X AA 1 -400 200 300 R 50 50 1 1 P
+X AB 2 -400 -200 300 R 50 50 1 1 P
+X SA 3 400 -200 300 L 50 50 1 1 P
+X SB 4 400 200 300 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Diodes:1N4007
+#
+DEF Diodes:1N4007 D 0 60 Y Y 1 L N
+F0 "D" 150 100 50 H V C CNN
+F1 "Diodes:1N4007" 150 -100 50 H V C CNN
+F2 "ICs And Semiconductors THD:DO-41" 0 -330 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\1N4007.pdf" 0 -420 60 H I L CNN
+F4 "1N4007" 0 -510 60 H I L CNN "Part Number"
+F5 "Diode" 0 -600 60 H I L CNN "Library Ref"
+F6 "SchLib\\Diodes.SchLib" 0 -690 60 H I L CNN "Library Path"
+F7 "=Device" 0 -780 60 H I L CNN "Comment"
+F8 "Standard" 0 -870 60 H I L CNN "Component Kind"
+F9 "Standard" 0 -960 60 H I L CNN "Component Type"
+F10 "1N4007" 0 -1050 60 H I L CNN "Device"
+F11 "DO-41" 0 -1140 60 H I L CNN "Footprint"
+F12 "DO-41, Diode, Axial, Body 4.7 x 2.7mm (LxDia. Max), Pin spacing 10.16mm" 0 -1230 60 H I L CNN "PackageDescription"
+F13 "1000V" 0 -1320 60 H I L CNN "Voltage"
+F14 "1A" 0 -1410 60 H I L CNN "Power"
+F15 "~~" 0 -1500 60 H I L CNN "Status"
+F16 "Axial Lead Standard Recovery Rectifier" 0 -1590 60 H I L CNN "Part Description"
+F17 "FAIRCHILD SEMICONDUCTOR" 0 -1680 60 H I L CNN "Manufacturer"
+F18 "1N4007" 0 -1770 60 H I L CNN "Manufacturer Part Number"
+F19 "2" 0 -1860 60 H I L CNN "Pin Count"
+F20 "DO-41" 0 -1950 60 H I L CNN "Case"
+F21 "Yes" 0 -2040 60 H I L CNN "Mounted"
+F22 "No" 0 -2130 60 H I L CNN "Socket"
+F23 "No" 0 -2220 60 H I L CNN "SMD"
+F24 "No" 0 -2310 60 H I L CNN "PressFit"
+F25 "No" 0 -2400 60 H I L CNN "Sense"
+F26 "~~" 0 -2490 60 H I L CNN "Sense Comment"
+F27 "No" 0 -2580 60 H I L CNN "Bonding"
+F28 "~~" 0 -2670 60 H I L CNN "Status Comment"
+F29 "2.72mm" 0 -2760 60 H I L CNN "ComponentHeight"
+F30 "PcbLib\\ICs And Semiconductors THD.PcbLib" 0 -2850 60 H I L CNN "Footprint Path"
+F31 "DO-41" 0 -2940 60 H I L CNN "Footprint Ref"
+F32 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\1N4007.pdf" 0 -3030 60 H I L CNN "HelpURL"
+F33 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\1N4007_Package.pdf" 0 -3120 60 H I L CNN "ComponentLink1URL"
+F34 "Package Drawing" 0 -3210 60 H I L CNN "ComponentLink1Description"
+F35 "~~" 0 -3300 60 H I L CNN "ComponentLink2URL"
+F36 "~~" 0 -3390 60 H I L CNN "ComponentLink2Description"
+F37 "CERN DEM JLC" 0 -3480 60 H I L CNN "Author"
+F38 "08/20/08 00:00:00" 0 -3570 60 H I L CNN "CreateDate"
+F39 "10/30/13 00:00:00" 0 -3660 60 H I L CNN "LatestRevisionDate"
+F40 "ICs And Semiconductors THD" 0 -3750 60 H I L CNN "Library Name"
+F41 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3840 60 H I L CNN "License"
+DRAW
+P 2 0 1 10 100 0 200 0 N
+P 2 0 1 10 180 60 180 -60 N
+P 4 0 1 10 120 -60 180 0 120 60 120 -60 F
+X C 1 300 0 100 L 0 0 0 1 P
+X A 2 0 0 100 R 0 0 0 1 P
+ENDDRAW
+ENDDEF
+#
+# Pads:NON-PLATED_HOLE3.0
+#
+DEF ~Pads:NON-PLATED_HOLE3.0 B 0 60 Y Y 1 L N
+F0 "B" -50 0 50 H V R CNN
+F1 "Pads:NON-PLATED_HOLE3.0" 0 -170 60 H I L CNN
+F2 "Pads:MTG300" 0 -260 60 H I L CNN
+F3 "Undefined" 0 -350 60 H I L CNN
+F4 "Non Plated Hole" 0 -440 60 H I L CNN
+F5 "NON-PLATED_HOLE3.0" 0 -440 60 H I L CNN "Part Number"
+F6 "Single Terminal Socket" 0 -530 60 H I L CNN "Library Ref"
+F7 "SchLib\\Pads.SchLib" 0 -620 60 H I L CNN "Library Path"
+F8 "~~" 0 -710 60 H I L CNN "Comment"
+F9 "Standard (No BOM)" 0 -800 60 H I L CNN "Component Kind"
+F10 "Standard (No BOM)" 0 -890 60 H I L CNN "Component Type"
+F11 "MTG300" 0 -980 60 H I L CNN "Footprint"
+F12 "1" 0 -1070 60 H I L CNN "Pin Count"
+F13 "~~" 0 -1160 60 H I L CNN "Case"
+F14 "PcbLib\\Pads.PcbLib" 0 -1250 60 H I L CNN "Footprint Path"
+F15 "MTG300" 0 -1340 60 H I L CNN "Footprint Ref"
+F16 "Non Plated Hole" 0 -1430 60 H I L CNN "Family"
+F17 "No" 0 -1520 60 H I L CNN "Mounted"
+F18 "No" 0 -1610 60 H I L CNN "Socket"
+F19 "No" 0 -1700 60 H I L CNN "SMD"
+F20 "No" 0 -1790 60 H I L CNN "Sense"
+F21 "~~" 0 -1880 60 H I L CNN "Sense Comment"
+F22 "None" 0 -1970 60 H I L CNN "Status"
+F23 "~~" 0 -2060 60 H I L CNN "Status Comment"
+F24 "~~" 0 -2150 60 H I L CNN "SCEM"
+F25 "Non Plated Through Hole: Hole Dia.=3.0mm" 0 -2240 60 H I L CNN "Part Description"
+F26 "~~" 0 -2330 60 H I L CNN "Manufacturer"
+F27 "~~" 0 -2420 60 H I L CNN "Manufacturer Part Number"
+F28 "0mm" 0 -2510 60 H I L CNN "ComponentHeight"
+F29 "~~" 0 -2600 60 H I L CNN "Manufacturer1 Example"
+F30 "~~" 0 -2690 60 H I L CNN "Manufacturer1 Part Number"
+F31 "~~" 0 -2780 60 H I L CNN "Manufacturer1 ComponentHeight"
+F32 "Undefined" 0 -2870 60 H I L CNN "HelpURL"
+F33 "~~" 0 -2960 60 H I L CNN "ComponentLink1URL"
+F34 "~~" 0 -3050 60 H I L CNN "ComponentLink1Description"
+F35 "~~" 0 -3140 60 H I L CNN "ComponentLink2URL"
+F36 "~~" 0 -3230 60 H I L CNN "ComponentLink2Description"
+F37 "CERN DEM JLC" 0 -3320 60 H I L CNN "Author"
+F38 "05/26/08 00:00:00" 0 -3410 60 H I L CNN "CreateDate"
+F39 "05/26/08 00:00:00" 0 -3500 60 H I L CNN "LatestRevisionDate"
+F40 "Non Plated Through Hole: Hole Dia.=3.0mm" 0 -3590 60 H I L CNN "PackageDescription"
+F41 "Pads" 0 -3680 60 H I L CNN "Library Name"
+F42 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3770 60 H I L CNN "License"
+DRAW
+C 0 0 30 0 1 10 f
+X 1 1 0 0 0 L 0 0 0 1 B
+ENDDRAW
+ENDDEF
+#
+# Regulators:LM7805CT_h
+#
+DEF Regulators:LM7805CT_h IC 0 60 Y Y 1 L N
+F0 "IC" 300 50 50 H V C CNN
+F1 "Regulators:LM7805CT_h" 450 -400 50 H V L CNN
+F2 "ICs And Semiconductors THD:TO-220-H" 0 -750 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\LM7805CT.pdf" 0 -840 60 H I L CNN
+F4 "LM7805CT_h" 0 -930 60 H I L CNN "Part Number"
+F5 "REG3+1 1IN-2GND-3OUT+4GND" 0 -1020 60 H I L CNN "Library Ref"
+F6 "SchLib\\Regulators.SchLib" 0 -1110 60 H I L CNN "Library Path"
+F7 "=Device" 0 -1200 60 H I L CNN "Comment"
+F8 "Standard" 0 -1290 60 H I L CNN "Component Kind"
+F9 "Standard" 0 -1380 60 H I L CNN "Component Type"
+F10 "LM7805CT" 0 -1470 60 H I L CNN "Device"
+F11 "TO-220-H" 0 -1560 60 H I L CNN "Footprint"
+F12 "TO-220 3-Terminal + Tab - Horizontal Mount" 0 -1650 60 H I L CNN "PackageDescription"
+F13 "~~" 0 -1740 60 H I L CNN "Status"
+F14 "3-Terminal 5V 1A Positive Voltage Regulator" 0 -1830 60 H I L CNN "Part Description"
+F15 "FAIRCHILD SEMICONDUCTOR" 0 -1920 60 H I L CNN "Manufacturer"
+F16 "LM7805CT" 0 -2010 60 H I L CNN "Manufacturer Part Number"
+F17 "4" 0 -2100 60 H I L CNN "Pin Count"
+F18 "TO-220" 0 -2190 60 H I L CNN "Case"
+F19 "Yes" 0 -2280 60 H I L CNN "Mounted"
+F20 "No" 0 -2370 60 H I L CNN "Socket"
+F21 "No" 0 -2460 60 H I L CNN "SMD"
+F22 "No" 0 -2550 60 H I L CNN "PressFit"
+F23 "No" 0 -2640 60 H I L CNN "Sense"
+F24 "~~" 0 -2730 60 H I L CNN "Sense Comment"
+F25 "No" 0 -2820 60 H I L CNN "Bonding"
+F26 "~~" 0 -2910 60 H I L CNN "Status Comment"
+F27 "4.7mm" 0 -3000 60 H I L CNN "ComponentHeight"
+F28 "PcbLib\\ICs And Semiconductors THD.PcbLib" 0 -3090 60 H I L CNN "Footprint Path"
+F29 "TO-220-H" 0 -3180 60 H I L CNN "Footprint Ref"
+F30 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\LM7805CT.pdf" 0 -3270 60 H I L CNN "HelpURL"
+F31 "~~" 0 -3360 60 H I L CNN "ComponentLink1URL"
+F32 "~~" 0 -3450 60 H I L CNN "ComponentLink1Description"
+F33 "~~" 0 -3540 60 H I L CNN "ComponentLink2URL"
+F34 "~~" 0 -3630 60 H I L CNN "ComponentLink2Description"
+F35 "CERN DEM JLC" 0 -3720 60 H I L CNN "Author"
+F36 "03/18/08 00:00:00" 0 -3810 60 H I L CNN "CreateDate"
+F37 "03/18/08 00:00:00" 0 -3900 60 H I L CNN "LatestRevisionDate"
+F38 "~~" 0 -3990 60 H I L CNN "SCEM"
+F39 "ICs And Semiconductors THD" 0 -4080 60 H I L CNN "Library Name"
+F40 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -4170 60 H I L CNN "License"
+DRAW
+T 0 200 -280 50 1 0 1 GND Normal 0 L B
+S 0 -300 600 0 0 1 0 f
+X IN 1 -200 -100 200 R 60 60 0 1 I
+X GND 2 300 -500 200 U 60 0 0 1 W
+X OUT 3 800 -100 200 L 60 60 0 1 w
+X GND 4 400 -500 200 U 60 0 0 1 W
+ENDDRAW
+ENDDEF
+#
+# Relay_SolidState:MOC3041M
+#
+DEF Relay_SolidState:MOC3041M U 0 40 Y Y 1 F N
+F0 "U" -200 200 50 H V L CNN
+F1 "Relay_SolidState:MOC3041M" 0 200 50 H V L CNN
+F2 "" -200 -200 50 H I L CIN
+F3 "" -35 0 50 H I L CNN
+ALIAS MOC3032M MOC3033M MOC3041M MOC3042M MOC3043M MOC3081M MOC3082M MOC3083M MOC3061M MOC3062M MOC3063M MOC3162M MOC3163M
+$FPLIST
+ DIP*W7.62mm*
+ SMDIP*W9.53mm*
+ DIP*W10.16mm*
+$ENDFPLIST
+DRAW
+C 90 -100 5 0 1 0 N
+C 90 100 5 0 1 0 N
+S -200 150 200 -150 0 1 10 f
+P 2 0 1 10 -150 -25 -100 -25 N
+P 2 0 1 0 5 -45 5 100 N
+P 2 0 1 0 5 100 90 100 N
+P 2 0 1 10 75 25 145 25 N
+P 2 0 1 0 90 -100 50 -100 N
+P 2 0 1 0 90 -100 90 -25 N
+P 2 0 1 0 90 -100 200 -100 N
+P 2 0 1 0 90 100 90 25 N
+P 2 0 1 0 90 100 200 100 N
+P 2 0 1 10 105 -25 35 -25 N
+P 3 0 1 0 -200 100 -125 100 -125 25 N
+P 3 0 1 0 -125 -25 -125 -100 -200 -100 N
+P 3 0 1 0 75 -25 60 -55 50 -55 N
+P 4 0 1 10 -125 -25 -150 25 -100 25 -125 -25 F
+P 4 0 1 0 -25 -60 -10 -60 -25 -100 -10 -100 N
+P 4 0 1 0 0 -65 5 -60 10 -60 15 -65 N
+P 4 0 1 10 60 -25 85 25 35 25 60 -25 F
+P 4 0 1 10 120 25 95 -25 145 -25 120 25 F
+P 5 0 1 0 -75 -20 -25 -20 -40 -25 -40 -15 -25 -20 N
+P 5 0 1 0 -75 20 -25 20 -40 15 -40 25 -25 20 N
+P 5 0 1 0 -35 -45 -35 -115 50 -115 50 -45 -35 -45 N
+P 5 0 1 0 15 -95 10 -100 5 -100 0 -95 0 -65 N
+P 7 0 1 0 25 -60 25 -100 35 -100 40 -95 40 -65 35 -60 25 -60 N
+X ~ 1 -300 100 100 R 50 50 1 1 P
+X ~ 2 -300 -100 100 R 50 50 1 1 P
+X NC 3 -300 0 100 R 50 50 1 1 N N
+X ~ 4 300 -100 100 L 50 50 1 1 P
+X NC 5 300 0 100 L 50 50 1 1 N N
+X ~ 6 300 100 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Resistors_THD:RMF_150R_1%_0.125W_100PPM_1016-360X210
+#
+DEF ~Resistors_THD:RMF_150R_1%_0.125W_100PPM_1016-360X210 R 0 60 Y Y 1 L N
+F0 "R" 150 70 50 H V C CNN
+F1 "Resistors_THD:RMF_150R_1%_0.125W_100PPM_1016-360X210" 0 -210 60 H I L CNN
+F2 "Resistors THD:RES1016-360X210" 0 -300 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\RMF_STACKPOLE_RNF.pdf" 0 -390 60 H I L CNN
+F4 "150" 150 -70 50 H V C CNN "~"
+F5 "RMF_150R_1%_0.125W_100PPM_1016-360X210" 0 -480 60 H I L CNN "Part Number"
+F6 "Resistor - 1%" 0 -570 60 H I L CNN "Library Ref"
+F7 "SchLib\\Resistors.SchLib" 0 -660 60 H I L CNN "Library Path"
+F8 "=Value" 0 -750 60 H I L CNN "Comment"
+F9 "Standard" 0 -840 60 H I L CNN "Component Kind"
+F10 "Standard" 0 -930 60 H I L CNN "Component Type"
+F11 "RES1016-360X210" 0 -1020 60 H I L CNN "Footprint"
+F12 "~~" 0 -1110 60 H I L CNN "PackageDescription"
+F13 "2" 0 -1200 60 H I L CNN "Pin Count"
+F14 "PcbLib\\Resistors THD.PcbLib" 0 -1290 60 H I L CNN "Footprint Path"
+F15 "RES1016-360X210" 0 -1380 60 H I L CNN "Footprint Ref"
+F16 "150" 0 -1470 60 H I L CNN "Val"
+F17 "None" 0 -1560 60 H I L CNN "Status"
+F18 "0.125W" 0 -1650 60 H I L CNN "Power"
+F19 "±100ppm/°C" 0 -1740 60 H I L CNN "TC"
+F20 "~~" 0 -1830 60 H I L CNN "Voltage"
+F21 "±1%" 0 -1920 60 H I L CNN "Tolerance"
+F22 "Leaded Metal Film Resistor" 0 -2010 60 H I L CNN "Part Description"
+F23 "GENERIC" 0 -2100 60 H I L CNN "Manufacturer"
+F24 "RMF_150R_1%_0.125W_100PPM_1016-360X210" 0 -2190 60 H I L CNN "Manufacturer Part Number"
+F25 "LS10.16 L3.6 x D2.1" 0 -2280 60 H I L CNN "Case"
+F26 "No" 0 -2370 60 H I L CNN "PressFit"
+F27 "Yes" 0 -2460 60 H I L CNN "Mounted"
+F28 "~~" 0 -2550 60 H I L CNN "Sense Comment"
+F29 "No" 0 -2640 60 H I L CNN "Sense"
+F30 "~~" 0 -2730 60 H I L CNN "Status Comment"
+F31 "No" 0 -2820 60 H I L CNN "Socket"
+F32 "No" 0 -2910 60 H I L CNN "SMD"
+F33 "2.1mm" 0 -3000 60 H I L CNN "ComponentHeight"
+F34 "STACKPOLE ELECTRONICS INC" 0 -3090 60 H I L CNN "Manufacturer1 Example"
+F35 "RNF18FTD150R" 0 -3180 60 H I L CNN "Manufacturer1 Part Number"
+F36 "2.1mm" 0 -3270 60 H I L CNN "Manufacturer1 ComponentHeight"
+F37 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\RMF_STACKPOLE_RNF.pdf" 0 -3360 60 H I L CNN "HelpURL"
+F38 "CERN DEM JLC" 0 -3450 60 H I L CNN "Author"
+F39 "08/21/12 00:00:00" 0 -3540 60 H I L CNN "CreateDate"
+F40 "08/21/12 00:00:00" 0 -3630 60 H I L CNN "LatestRevisionDate"
+F41 "Resistors THD" 0 -3720 60 H I L CNN "Library Name"
+F42 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3810 60 H I L CNN "License"
+DRAW
+T 0 150 0 25 1 0 1 1% Normal 0 C C
+P 2 0 1 10 60 -30 240 -30 N
+P 2 0 1 10 60 30 60 -30 N
+P 2 0 1 10 240 -30 240 30 N
+P 2 0 1 10 240 30 60 30 N
+X 1 1 0 0 60 R 0 0 0 1 P
+X 2 2 300 0 60 L 0 0 0 1 P
+ENDDRAW
+ENDDEF
+#
+# TYCO:TYCO_62409-1
+#
+DEF ~TYCO:TYCO_62409-1 J 0 60 Y Y 1 L N
+F0 "J" 0 0 50 H V R CNN
+F1 "TYCO:TYCO_62409-1" 0 -170 60 H I L CNN
+F2 "TYCO THD:TYCO_62409-1" 0 -260 60 H I L CNN
+F3 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\TYCO_62409-1.pdf" 0 -350 60 H I L CNN
+F4 "FASTON" 0 -440 60 H I L CNN
+F5 "TYCO_62409-1" 0 -440 60 H I L CNN "Part Number"
+F6 "Single Pin Male" 0 -530 60 H I L CNN "Library Ref"
+F7 "SchLib\\Connectors.SchLib" 0 -620 60 H I L CNN "Library Path"
+F8 "~~" 0 -710 60 H I L CNN "Comment"
+F9 "Standard" 0 -800 60 H I L CNN "Component Kind"
+F10 "Standard" 0 -890 60 H I L CNN "Component Type"
+F11 "TYCO_62409-1" 0 -980 60 H I L CNN "Footprint"
+F12 "~~" 0 -1070 60 H I L CNN "PackageDescription"
+F13 "1" 0 -1160 60 H I L CNN "Pin Count"
+F14 "~~" 0 -1250 60 H I L CNN "Case"
+F15 "PcbLib\\TYCO THD.PcbLib" 0 -1340 60 H I L CNN "Footprint Path"
+F16 "TYCO_62409-1" 0 -1430 60 H I L CNN "Footprint Ref"
+F17 "FASTON" 0 -1520 60 H I L CNN "Family"
+F18 "Yes" 0 -1610 60 H I L CNN "Mounted"
+F19 "No" 0 -1700 60 H I L CNN "Socket"
+F20 "No" 0 -1790 60 H I L CNN "SMD"
+F21 "No" 0 -1880 60 H I L CNN "PressFit"
+F22 "No" 0 -1970 60 H I L CNN "Sense"
+F23 "~~" 0 -2060 60 H I L CNN "Sense Comment"
+F24 "None" 0 -2150 60 H I L CNN "Status"
+F25 "~~" 0 -2240 60 H I L CNN "Status Comment"
+F26 "~~" 0 -2330 60 H I L CNN "SCEM"
+F27 "~~" 0 -2420 60 H I L CNN "Device"
+F28 "6.3 x 0.8mm FASTON Tab for Printed Circuit Board" 0 -2510 60 H I L CNN "Part Description"
+F29 "TYCO ELECTRONICS" 0 -2600 60 H I L CNN "Manufacturer"
+F30 "62409-1" 0 -2690 60 H I L CNN "Manufacturer Part Number"
+F31 "12.62mm" 0 -2780 60 H I L CNN "ComponentHeight"
+F32 "~~" 0 -2870 60 H I L CNN "ComponentLink1URL"
+F33 "~~" 0 -2960 60 H I L CNN "ComponentLink1Description"
+F34 "~~" 0 -3050 60 H I L CNN "ComponentLink2URL"
+F35 "~~" 0 -3140 60 H I L CNN "ComponentLink2Description"
+F36 "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\TYCO_62409-1.pdf" 0 -3230 60 H I L CNN "HelpURL"
+F37 "CERN DEM JMW" 0 -3320 60 H I L CNN "Author"
+F38 "04/16/10 00:00:00" 0 -3410 60 H I L CNN "CreateDate"
+F39 "04/16/10 00:00:00" 0 -3500 60 H I L CNN "LatestRevisionDate"
+F40 "TYCO THD" 0 -3590 60 H I L CNN "Library Name"
+F41 "This work is licensed under the Creative Commons CC-BY-SA 4.0 License. To the extent that circuit schematics that use Licensed Material can be considered to be ‘Adapted Material’, then the copyright holder waives article 3.b of the license with respect to these schematics." 0 -3680 60 H I L CNN "License"
+DRAW
+P 2 0 1 20 50 0 100 0 N
+X 1 1 200 0 100 L 60 0 0 1 B
+ENDDRAW
+ENDDEF
+#
+# Triac_Thyristor:BT138-800
+#
+DEF Triac_Thyristor:BT138-800 Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "Triac_Thyristor:BT138-800" 200 0 50 H V L CNN
+F2 "Package_TO_SOT_THT:TO-220_Neutral123_Vertical" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+ALIAS TIC206 BT138-600 BT138-800 TIC216 BT136-500 BT136-600 BT136-800 BT139-600
+$FPLIST
+ TO?220*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -100 -50 100 -50 N
+P 2 0 1 8 -100 50 100 50 N
+P 2 0 1 0 -50 -100 -25 -50 N
+P 3 0 1 8 -100 50 -50 -50 0 50 N
+P 3 0 1 8 0 -50 50 50 100 -50 N
+X A1 1 0 150 100 D 50 50 1 1 P
+X A2 2 0 -150 100 U 50 50 1 1 P
+X G 3 -150 -100 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# conn:CONN_02X03
+#
+DEF conn:CONN_02X03 J 0 1 Y N 1 F N
+F0 "J" 0 200 50 H V C CNN
+F1 "conn:CONN_02X03" 0 -200 50 H V C CNN
+F2 "" 0 -1200 50 H I C CNN
+F3 "" 0 -1200 50 H I C CNN
+$FPLIST
+ Pin_Header_Straight_2X*
+ Pin_Header_Angled_2X*
+ Socket_Strip_Straight_2X*
+ Socket_Strip_Angled_2X*
+ IDC_Header_Straight_*
+$ENDFPLIST
+DRAW
+S -100 -95 -50 -105 0 1 0 N
+S -100 5 -50 -5 0 1 0 N
+S -100 105 -50 95 0 1 0 N
+S -100 150 100 -150 0 1 0 N
+S 50 -95 100 -105 0 1 0 N
+S 50 5 100 -5 0 1 0 N
+S 50 105 100 95 0 1 0 N
+X P1 1 -250 100 150 R 50 50 1 1 P
+X P2 2 250 100 150 L 50 50 1 1 P
+X P3 3 -250 0 150 R 50 50 1 1 P
+X P4 4 250 0 150 L 50 50 1 1 P
+X P5 5 -250 -100 150 R 50 50 1 1 P
+X P6 6 250 -100 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power:+5V
+#
+DEF power:+5V #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "power:+5V" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power:GND
+#
+DEF power:GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power:GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+#End Library
