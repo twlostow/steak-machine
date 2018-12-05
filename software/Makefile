@@ -98,7 +98,7 @@ CXX_WARNINGS = -Wall -Wextra
 C_WARNINGS = -Wall -Wstrict-prototypes -Wextra
 
 # C++ language standard ("c++98", "gnu++98" - default, "c++0x", "gnu++0x")
-CXX_STD = gnu++98
+CXX_STD = c++11
 
 # C language standard ("c89" / "iso9899:1990", "iso9899:199409",
 # "c99" / "iso9899:1999", "gnu89" - default, "gnu99")
@@ -137,7 +137,7 @@ C_FLAGS = -std=$(C_STD) -g -ggdb3 -fverbose-asm -Wa,-ahlms=$(OUT_DIR_F)$(notdir 
 AS_FLAGS = -g -ggdb3 -Wa,-amhls=$(OUT_DIR_F)$(notdir $(<:.$(AS_EXT)=.lst))
 
 # flags for linker
-LD_FLAGS = -T$(LD_SCRIPT) -g -Wl,-Map=$(OUT_DIR_F)$(PROJECT).map,--cref,--no-warn-mismatch
+LD_FLAGS = -T$(LD_SCRIPT) -g -Wl,-Map=$(OUT_DIR_F)$(PROJECT).map,--cref,--no-warn-mismatch -fno-rtti -fno-exceptions
 
 # process option for removing unused code
 ifeq ($(REMOVE_UNUSED), 1)
@@ -284,7 +284,7 @@ make_output_dir :
 #=============================================================================#
 
 isp: all
-	./lpc21isp -control -bin $(BIN) /dev/ttyUSB0 115200 18432
+	lpc21isp  -term -control -bin $(BIN) /dev/ttyUSB0 115200 25000
 
 clean:
 ifeq ($(strip $(OUT_DIR_F)), )

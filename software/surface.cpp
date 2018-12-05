@@ -12,6 +12,11 @@ Surface::Surface(int w, int h, void *buffer)
 	m_buffer = (uint8_t *)buffer;
 }
 
+Surface::~Surface()
+{
+	
+}
+
 void Surface::pixel(int x, int y, int value)
 {
 	if(x < 0 || x >= m_w || y < 0 || y >= m_h)

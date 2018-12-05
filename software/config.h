@@ -19,7 +19,7 @@
 +=============================================================================+
 */
 
-#define CRYSTAL								18432000	///< quartz crystal resonator which is connected to the chip
+#define CRYSTAL								25000000    ///< quartz crystal resonator which is connected to the chip
 #define FREQUENCY							50000000	///< desired target frequency of the core
 
 #ifdef __cplusplus 

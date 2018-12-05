@@ -11,19 +11,21 @@ class GPIOPin {
 	public:
 		GPIOPin() {};
 		virtual	~GPIOPin() {};
-	
+
 		enum GPIOPinMode {
 			INPUT = 0,
 			OUTPUT = 1,
 			PULLUP = 4,
 			AUX_1 = 8,
 			AUX_2 = 16,
-			DIRECTION_MASK = 1 
+			DIRECTION_MASK = 1
 		};
-	
+
 		virtual void SetMode(int mode) = 0;
 		virtual void Output(bool value) = 0;
 		virtual bool Input() = 0;
+		virtual bool IsInputGlitchFree() = 0;
+		
 };
 
 class LPCPin : public GPIOPin {
@@ -50,9 +52,9 @@ class LPCPin : public GPIOPin {
 			m_cur_state = false;
 			SetMode(mode);
 		};
-		
+
 		~LPCPin() {};
-		
+
 		void SetMode(int mode)
 		{
 			if ((mode & DIRECTION_MASK) == INPUT)
@@ -63,53 +65,79 @@ class LPCPin : public GPIOPin {
 			}
 		};
 
-		void EnableInterrupt(bool edge, int pos_neg)
+		void EnableInterrupt(bool edge, int pos_neg, bool both = false)
 		{
 			if(edge)
 				m_regs->IS &= ~(1<<m_pin);
 			else
 				m_regs->IS |= (1<<m_pin);
 
+			if(both)
 				m_regs->IBE &= ~(1<<m_pin);
+			else
+				m_regs->IBE |= (1<<m_pin);
 
 			if(pos_neg)
 				m_regs->IEV |= (1<<m_pin);
 			else
 				m_regs->IEV &= ~(1<<m_pin);
-				
+
 			m_regs->IE |= (1<<m_pin);
-		}		
-		
+		}
+
+		void ClearInterrupt()
+		{
+			m_regs->IC = (1<<m_pin);
+		}
+
 		void Output(bool value)
 		{
 			*m_gma = (value ? 0xffffffff : 0);
 			m_cur_state = value;
 		};
-		
+
 		bool Input()
 		{
 			return *m_gma != 0;
 		};
-		
+
+		bool IsInputGlitchFree()
+		{
+			m_deglitchState <<= 1;
+			if( Input() )
+				m_deglitchState |= 1;
+
+			return m_deglitchState == 0xffffffff || !m_deglitchState;
+		}
+
+
+		uint32_t InputWide()
+		{
+			return m_regs->DATA;                 /*!< Offset: 0x3FFC Port data Register (R/W) */
+		}
+
 		bool Edge(bool rising)
 		{
 			bool cur = Input();
-			
-			if(rising && cur && !m_in_state)
-				return true;
-			else if (!rising && !cur && m_in_state)
-				return true;
-			
+			bool prevState = m_in_state;
+
 			m_in_state = cur;
+
+			if(rising && cur && !prevState)
+				return true;
+			else if (!rising && !cur && prevState)
+				return true;
+
 			return false;
 		}
-		
+
 	private:
 		int m_pin;
 		bool m_cur_state;
 		bool m_in_state;
 		volatile uint32_t *m_gma;
 		volatile LPC_GPIO_TypeDef *m_regs;
+		uint32_t m_deglitchState;
 };
 
 #endif

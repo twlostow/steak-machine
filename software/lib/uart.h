@@ -8,7 +8,7 @@
  *   2009.12.07  ver 1.00    Preliminary version, first Release
  *
 ******************************************************************************/
-#ifndef __UART_H 
+#ifndef __UART_H
 #define __UART_H
 
 #include <stdint.h>
@@ -46,11 +46,18 @@
 #define RS485_DCTRL		(0x1<<4)
 #define RS485_OINV		(0x1<<5)
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 void ModemInit( void );
 void UARTInit(uint32_t Baudrate);
 void UART_IRQHandler(void);
 void UARTSend(uint8_t *BufferPtr, uint32_t Length);
 
+#ifdef __cplusplus
+};
+#endif
 #endif /* end __UART_H */
 /*****************************************************************************
 **                            End Of File

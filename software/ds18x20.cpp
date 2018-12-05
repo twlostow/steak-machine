@@ -72,9 +72,10 @@ bool DS18TempSensor::probe(int index) {
   uint8_t go, id [8];
   bool ret;
   uint8_t diff = OW_SEARCH_FIRST;
-    
+
   ret = true;
   go = 1;
+  int loop = 0;
   do {
   	diff = m_ow->rom_search(diff, id);
 
@@ -82,7 +83,12 @@ bool DS18TempSensor::probe(int index) {
       go = 0;
       ret = false;
     }
-    else if(id[0] == DS18B20_FAMILY_CODE || id[0] == DS18S20_FAMILY_CODE || id[0] == DS1822_FAMILY_CODE) go = 0;
+    else if(id[0] == DS18B20_FAMILY_CODE || id[0] == DS18S20_FAMILY_CODE || id[0] == DS1822_FAMILY_CODE)
+    {
+        if ( loop == index )
+            go = 0;
+        loop++;
+    }
   } while(go);
 
   memcpy(m_rom_id, id, 8);
@@ -93,31 +99,35 @@ bool DS18TempSensor::probe(int index) {
 }
 
 
-void DS18TempSensor::start() 
+void DS18TempSensor::start()
 {
   m_ow->reset();
   m_ow->command(DS18X20_CONVERT_T, m_rom_id);
 }
 
-bool DS18TempSensor::poll() 
+bool DS18TempSensor::poll()
 {
    return m_ow->bit_io(1);
 }
 
-float DS18TempSensor::read()
+bool DS18TempSensor::readTempFromSensor( float *temp )
 {
-	read_scratchpad();
+	if (! read_scratchpad() )
+    return false;
+   
 
 	int measure = (unsigned int)sp[0] | ((unsigned int)sp[1] << 8);
-  
-    if(measure & 0x8000) 
-    {		
+
+    if(measure & 0x8000)
+    {
   	 	measure ^= 0xffff; /* convert to positive => (twos complement)++ */
   	  	measure++;
-  	  	return -(float)measure / 16.0;
+  	  	*temp = -(float)measure / 16.0;
   	} else {
-  		return (float)measure / 16.0;
+  		*temp =  (float)measure / 16.0;
   	}
+
+    return true;
 }
 
 void DS18TempSensor::write_scratchpad(uint8_t th, uint8_t tl, uint8_t conf)
@@ -128,17 +138,21 @@ void DS18TempSensor::write_scratchpad(uint8_t th, uint8_t tl, uint8_t conf)
     m_ow->command(DS18X20_WRITE_SCRATCHPAD, m_rom_id);
     m_ow->byte_wr(th);
     m_ow->byte_wr(tl);
-    if(m_rom_id[0] == DS18B20_FAMILY_CODE || m_rom_id[0] == DS1822_FAMILY_CODE) 
- 	   m_ow->byte_wr(conf); 
+    if(m_rom_id[0] == DS18B20_FAMILY_CODE || m_rom_id[0] == DS1822_FAMILY_CODE)
+ 	   m_ow->byte_wr(conf);
 }
 
-void DS18TempSensor::read_scratchpad()
+bool DS18TempSensor::read_scratchpad()
 {
 	 int i;
-  	 
+
   	 m_ow->reset();
   	 m_ow->command( DS18X20_READ, m_rom_id );
   	 for(i = 0; i < 8; i++) sp[i] = m_ow->byte_rd();
 
-
+  	 for(i = 0; i < 8; i++) 
+      if( sp[i]  != 0xff )
+        return true;
+    
+    return false;
 }

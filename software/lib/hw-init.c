@@ -171,6 +171,12 @@ uint32_t timer_get_tics()
 	return LPC_TMR32B0 -> TC;
 }
 
+uint32_t timer_get_tics_ms()
+{
+	return LPC_TMR32B0 -> TC / (FREQUENCY / 1000);
+}
+
+
 void system_init(void)
 {
 	pll_start(CRYSTAL, FREQUENCY);
@@ -178,6 +184,8 @@ void system_init(void)
 	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_IOCON;	// enable clock for IO configuration block
 	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_CT32B0;	// enable clock for IO configuration block
 	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_CT32B1;	// enable clock for IO configuration block
+	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_CT16B0;	// enable clock for IO configuration block
+	LPC_SYSCON->SYSAHBCLKCTRL |= SYSAHBCLKCTRL_CT16B1;	// enable clock for IO configuration block
 			
 	timer_init();
 }

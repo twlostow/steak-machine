@@ -44,7 +44,7 @@ PROVIDE(__process_stack_size = __process_stack_size);
 
 MEMORY
 {
-	rom (rx)	: org = 0x00000000, len = 32k
+	rom (rx)	: org = 0x00000000, len = 64k
 	ram (rwx)	: org = 0x10000000, len = 8k
 }
 

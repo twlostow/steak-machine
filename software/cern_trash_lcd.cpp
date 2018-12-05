@@ -37,10 +37,10 @@ void CERNTrashLCD::control(uint8_t data, uint8_t ctrl)
 	e1->Output(ctrl == 0);
 	e2->Output(ctrl == 1);
 
-	delayMicroseconds(1);
+	delayMicroseconds(10);
 	e1->Output(false);
 	e2->Output(false);
-	delayMicroseconds(1);
+	delayMicroseconds(10);
 }
 
 void CERNTrashLCD::data(uint8_t data)
@@ -53,20 +53,20 @@ void CERNTrashLCD::data(uint8_t data)
 		else
 			dpins[i] -> Output(false);
 
-	delayMicroseconds(1);
+	delayMicroseconds(10);
    
   if (m_column < c_width / 2)
    	e2->Output(true);
   else
    	e1->Output(true);
 
-	delayMicroseconds(1);
+	delayMicroseconds(10);
 	e1->Output(false);
 	e2->Output(false);
 	m_column++;
 	if(m_column >= c_width)
 		m_column = 0;
-	delayMicroseconds(1);
+	delayMicroseconds(10);
 } 			
 
 void CERNTrashLCD::init()

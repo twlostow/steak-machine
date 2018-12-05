@@ -26,7 +26,7 @@ volatile uint32_t UARTCount = 0;
 **
 ** parameters:			None
 ** Returned value:		None
-** 
+**
 *****************************************************************************/
 void UART_IRQHandler(void)
 {
@@ -34,7 +34,7 @@ void UART_IRQHandler(void)
   uint8_t Dummy = Dummy;
 
   IIRValue = LPC_UART->IIR;
-    
+
   IIRValue >>= 1;			/* skip pending bit in IIR */
   IIRValue &= 0x07;			/* check bit 1~3, interrupt identification */
   if (IIRValue == IIR_RLS)		/* Receive Line Status */
@@ -46,11 +46,11 @@ void UART_IRQHandler(void)
       /* There are errors or break interrupt */
       /* Read LSR will clear the interrupt */
       UARTStatus = LSRValue;
-      Dummy = LPC_UART->RBR;	/* Dummy read on RX to clear 
+      Dummy = LPC_UART->RBR;	/* Dummy read on RX to clear
 								interrupt, then bail out */
       return;
     }
-    if (LSRValue & LSR_RDR)	/* Receive Data Ready */			
+    if (LSRValue & LSR_RDR)	/* Receive Data Ready */
     {
       /* If no error on RLS, normal ready, save into the data buffer. */
       /* Note: read RBR will clear the interrupt */
@@ -58,7 +58,7 @@ void UART_IRQHandler(void)
       if (UARTCount == BUFSIZE)
       {
         UARTCount = 0;		/* buffer overflow */
-      }	
+      }
     }
   }
   else if (IIRValue == IIR_RDA)	/* Receive Data Available */
@@ -100,7 +100,7 @@ void UART_IRQHandler(void)
 **
 ** parameters:			None
 ** Returned value:		None
-** 
+**
 *****************************************************************************/
 void ModemInit( void )
 {
@@ -110,7 +110,7 @@ void ModemInit( void )
   LPC_IOCON->PIO0_7 |= 0x01;     /* UART CTS */
   LPC_IOCON->PIO1_5 &= ~0x07;    /* UART I/O config */
   LPC_IOCON->PIO1_5 |= 0x01;     /* UART RTS */
-#if 1 
+#if 1
   LPC_IOCON->DSR_LOC	= 0;
   LPC_IOCON->PIO2_1 &= ~0x07;    /* UART I/O config */
   LPC_IOCON->PIO2_1 |= 0x01;     /* UART DSR */
@@ -136,7 +136,7 @@ void ModemInit( void )
   LPC_IOCON->PIO3_3 &= ~0x07;    /* UART I/O config */
   LPC_IOCON->PIO3_3 |= 0x01;     /* UART RI */
 #endif
-  LPC_UART->MCR = 0xC0;          /* Enable Auto RTS and Auto CTS. */			
+  LPC_UART->MCR = 0xC0;          /* Enable Auto RTS and Auto CTS. */
   return;
 }
 
@@ -148,7 +148,7 @@ void ModemInit( void )
 **
 ** parameters:			UART baudrate
 ** Returned value:		None
-** 
+**
 *****************************************************************************/
 void UARTInit(uint32_t baudrate)
 {
@@ -157,12 +157,12 @@ void UARTInit(uint32_t baudrate)
 
   UARTTxEmpty = 1;
   UARTCount = 0;
-  
+
   NVIC_DisableIRQ(UART_IRQn);
 
   LPC_IOCON->PIO1_6 &= ~0x07;    /*  UART I/O config */
   LPC_IOCON->PIO1_6 |= 0x01;     /* UART RXD */
-  LPC_IOCON->PIO1_7 &= ~0x07;	
+  LPC_IOCON->PIO1_7 &= ~0x07;
   LPC_IOCON->PIO1_7 |= 0x01;     /* UART TXD */
   /* Enable UART clock */
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<12);
@@ -173,7 +173,7 @@ void UARTInit(uint32_t baudrate)
 
   Fdiv = (((FREQUENCY*LPC_SYSCON->SYSAHBCLKDIV)/regVal)/16)/baudrate ;	/*baud rate */
 
-  LPC_UART->DLM = Fdiv / 256;							
+  LPC_UART->DLM = Fdiv / 256;
   LPC_UART->DLL = Fdiv % 256;
   LPC_UART->LCR = 0x03;		/* DLAB = 0 */
   LPC_UART->FCR = 0x07;		/* Enable and reset TX and RX FIFO. */
@@ -188,7 +188,7 @@ void UARTInit(uint32_t baudrate)
   {
 	regVal = LPC_UART->RBR;	/* Dump data from RX FIFO */
   }
- 
+
   /* Enable the UART Interrupt */
   NVIC_EnableIRQ(UART_IRQn);
 
@@ -210,11 +210,11 @@ void UARTInit(uint32_t baudrate)
 **
 ** parameters:		buffer pointer, and data length
 ** Returned value:	None
-** 
+**
 *****************************************************************************/
 void UARTSend(uint8_t *BufferPtr, uint32_t Length)
 {
-  
+
   while ( Length != 0 )
   {
 	  /* THRE status, contain valid data */
@@ -235,13 +235,19 @@ void UARTSend(uint8_t *BufferPtr, uint32_t Length)
 
 void test_uart()
 {
-	UARTInit(9600);
+	UARTInit(115200);
 	__enable_irq();
 	for(;;)
 		UARTSend("UUUUUU", 6);
-	
+
 }
 
+void puts(char *s)
+{
+    char c;
+    while(c = *s++)
+        UARTSend(&c, 1);
+}
 
 /******************************************************************************
 **                            End Of File
